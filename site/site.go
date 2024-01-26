@@ -99,6 +99,7 @@ func initService() (*Service, error) {
 	return &Service{db: db}, nil
 }
 
+// topic
 var SiteAddedTopic = pubsub.NewTopic[*Site]("site-added", pubsub.TopicConfig{
 	DeliveryGuarantee: pubsub.AtLeastOnce,
 })
